@@ -25,7 +25,7 @@ delayed_delete = False
 scrub_time = 43200
 scrubber_datadir = /var/lib/glance/scrubber
 image_cache_dir = /var/lib/glance/image-cache/
-
+container_formats = <%= @container_formats %>
 
 ##### SQL #####
 sql_connection = mysql://<%= @db_user %>:<%= @db_password %>@<%= @db_ip_address %>/<%= @db_name %>

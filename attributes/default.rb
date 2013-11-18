@@ -85,6 +85,7 @@ default["glance"]["api"]["notifier_strategy"] = "noop"
 default["glance"]["api"]["notification_topic"] = "glance_notifications"
 default["glance"]["api"]["workers"] = [8, node["cpu"]["total"].to_i].min
 default["glance"]["api"]["show_image_direct_url"] = "True"
+default["glance"]["api"]["container_formats"] = "ami,ari,aki,bare,ovf"
 
 # Default Image Locations
 default["glance"]["image_upload"] = false

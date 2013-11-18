@@ -258,7 +258,9 @@ template "/etc/glance/glance-api.conf" do
 
     "service_tenant_name" => settings["service_tenant_name"],
     "service_user" => settings["service_user"],
-    "service_pass" => settings["service_pass"]
+    "service_pass" => settings["service_pass"],
+
+    "container_formats" => glance["api"]["container_formats"]
   )
   if api_bind["scheme"] == "https"
     notifies :restart, "service[apache2]", :immediately
